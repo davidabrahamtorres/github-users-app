@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block heading %}
+<center>GitHub Users</center>
+{% endblock %}
+
+{% block content%}	
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>ID</th>
+                <th>User Name</th>
+                <th>Type</th>
+                <th>GitHub Profile</th>
+            </tr>
+         </thead>  
+        <tbody>
+            {% for user in users_list.items %}
+                <tr>
+                    <td>
+                        <a href="{{ user['github_url'] }}">
+                            <img src= "{{ user['image_url'] }}" alt="image alt text" height="100" >
+                        </a>
+                    </td>
+                    <td>{{ user["id"] }}</td>
+                    <td>
+                        <a href="{{ user['github_url'] }}">{{ user["user_name"] }}</a>
+                    </td>
+                    <td>{{ user["type"] }}</td>
+                    <td>{{ user["github_url"] }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+    </table>
+    <ul class="pagination">
+        {% if users_list.has_prev %}
+            <li class="page-item">
+                <a class="page-link" href="{{ url_for('users', page=users_list.prev_num) }}">Previous</a>
+            </li>
+        {% else %}
+            <li class="page-item disable">
+                <span class="page-link">Previous</span>
+            </li>
+        {% endif %}
+
+        {% for page_num in users_list.iter_pages(left_edge=2, left_current=2, right_current=5, right_edge=2) %}
+            {% if page_num %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('users', page=page_num) }}">{{ page_num }}</a>
+                </li>
+            {% else %}
+                <li class="page-item disabled" id="example_ellipsis"><a href="#" class="page-link">…</a></li>
+            {% endif %}
+        {% endfor %}
+
+        {% if users_list.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="{{ url_for('users', page=users_list.next_num)}}">Next</a>
+            </li>
+        {% else %}
+            <li class="page-item disable">
+                <span class="page-link">Next</span>
+            </li>
+        {% endif %}
+    </ul>
+{% endblock %}

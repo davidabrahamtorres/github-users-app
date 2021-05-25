@@ -1,0 +1,37 @@
+#title {
+    padding: 10px;
+    color: #2095e4;
+}
+body {
+    background: rgb(255, 255, 255);
+}
+table {
+    width: 100%;
+    text-align: center;
+}
+#example_filter{
+    float: right;
+}
+#example_paginate{
+    float: right;
+}
+.page-item.disable .page-link {
+    color:#1178d8;
+    pointer-events: none;
+    cursor: auto;
+    background-color: rgb(182, 223, 185);
+    border-color: #0695f5 
+}
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid rgb(78, 160, 236);
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+  }
+input {
+    width: 100px;
+    height: 25px;
+}
