@@ -38,7 +38,11 @@ The sequence is important to successfully execute the app and display GitHub Use
 ### Installation
 
 1. Clone the repo.
+```sh
+  git clone https://github.com/davidabrahamtorres/github-users-app.git
+```
 2. Open seed.py file and edit your variable access_token='USE_YOUR_VALID_TOKEN' with a valid token provided by Git Hub.
+* To get the token go to GitHub Settings > Developer Settings > Personal access tokens.
 3. Execute the seed.py file.
 * Without specifying the number of users: (By default 150 users)
   ```sh
