@@ -45,7 +45,7 @@ def insert_table(record_list):
 def get_users(num_users):
     # Using an access token
     try:
-        access_token='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'
+        access_token='USE_YOUR_VALID_TOKEN'
         total_users = num_users
 
         g = Github(access_token)
