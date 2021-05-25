@@ -62,4 +62,6 @@ The sequence is important to successfully execute the app and display GitHub Use
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+To access the Flask App on your local environment go to users' URL: http://{localhost}:{PORT}/users
+
 Once you execute the Git Hub Users' app you might type the pagination size by specifying it on the upper right side.
