@@ -38,7 +38,8 @@ The sequence is important to successfully execute the app and display GitHub Use
 ### Installation
 
 1. Clone the repo.
-2. Execute the seed.py file.
+2. Open seed.py file and edit your variable access_token='USE_YOUR_VALID_TOKEN' with a valid token provided by Git Hub.
+3. Execute the seed.py file.
 * Without specifying the number of users: (By default 150 users)
   ```sh
   python3 seed.py
@@ -48,7 +49,7 @@ The sequence is important to successfully execute the app and display GitHub Use
   python3 seed.py --total #users
   Example: python3 seed.py --total 100
 	```
-3.Execute the app.py file.
+4.Execute the app.py file.
 * Before executing the file make sure a GitUsersDb.db file has been created on the root project folder.
 	```sh
 	python3 app.py
